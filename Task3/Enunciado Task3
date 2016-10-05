@@ -1,0 +1,9 @@
+Transformar a Classe ArrayInt em template, de modo que possamos declarar:
+
+Array<int> a( 10 );
+Usar como base o código enviado como solução da tarefa 02.
+
+Deve funcionar de forma recursiva:
+
+Array< Array< int > > a;
+Resolver o problema do construtor sem parâmetros.

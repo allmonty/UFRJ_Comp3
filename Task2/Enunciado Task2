@@ -1,0 +1,11 @@
+Alterar a classe ArrayInt acrscentando:
+
+1) Operador de atribuição de modo que possamos atribuir um array a outro.
+
+ArrayInt a( 10 ), b( 5 );
+a = b;
+
+2) Criar um operador [] para realizar indexação:
+
+a[2] = 1987;
+cout << a[2] << endl;

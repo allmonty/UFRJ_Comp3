@@ -1,0 +1,13 @@
+Criar uma classe Array de inteiros ArrayInt
+
+1) Tamanho definido no construtor:
+
+ArrayInt m( 10 );
+2) Deve verificar no put() e no at() se o indice passado está dentro do limite do array:
+
+m.put( 9, 1000 ); // OK
+m.put( 19, 1000 ); // Gerar erro.
+x = m.at( 1 ); // OK
+3) Não crie o destrutor (ainda!).
+
+Enviar um único arquivo ".cc" com todo o código (classe e função main).

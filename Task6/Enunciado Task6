@@ -1,0 +1,10 @@
+1) Escreva uma função genérica (operator <<) para inserir no final de um vector;
+
+2) Escreva uma função genérica para imprimir um vector em ostream.
+
+3) Faça um forEach para vector
+
+vector<int> v;
+v << 5 << 8 << 9;
+cout << v << endl;
+forEach( v, []( int x ) { cout << x * x << " "; } );

@@ -1,0 +1,21 @@
+Construir uma classe template Matriz<T> que possa ser ujtilizada da seguinte forma:
+
+Matriz<double> m{ 100, 50 };
+
+m[10][10] = 45;
+
+Se ultrapassar os limites da Matriz, deve gerar uma Exceção: ELimiteUltrapassado;
+
+Deve ser possível mudar o tamanho: m.realloc( 40, 30 ).
+
+Copiar os dados que estiverm dentro do limite da Matriz.
+
+Deve existir um método clear().
+
+Deve ser possível escrever:
+
+Matriz<double> a( 3, 4 ), b( 4, 6 ), c;
+
+c = a * b;
+
+c = a + b; 

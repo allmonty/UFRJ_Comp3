@@ -1,0 +1,12 @@
+Criar uma função forEach que percorra arrays do tipo T, aplicando uma função/functor F a cada elemento do array.
+
+Crie um Functor que calcule o desvio padrão de uma população para testar.
+
+Note que o tipo T necessita apenas ter o operador [ ] definido.
+
+Ex:
+
+Array<int> m( 10 );
+DesvPad dv;
+forEach( m, 10, dv );
+cout << dv.calcula() << endl;
