@@ -80,7 +80,10 @@ class Matrix {
             return Line( mat + l*cols, cols );
         }
         
-        const Matrix operator * ( const Matrix& b) const {
+        Matrix operator * ( const Matrix& b) const {
+            if(cols != b.rows)
+                throw Exception("Matrixes could not be multiplied, sizes dont match");
+
             Matrix mulMat(rows, b.cols);
 
             for(int i = 0; i < rows; ++i)
@@ -97,7 +100,7 @@ class Matrix {
             return mulMat;
         }
 
-        const Matrix operator + ( const Matrix& b) const {
+        Matrix operator + ( const Matrix& b) const {
             if(rows != b.rows || cols != b.cols)
                 throw Exception("Matrix must have the same size in sum");
 
