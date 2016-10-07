@@ -4,7 +4,7 @@
 using namespace std;
 
 template <typename T, typename F>
-void forEach(vector<T> v, const F& functor)
+void forEach(vector<T> v, F functor)
 {
 	for(int i = 0; i < v.size(); i++)
 	{
@@ -43,6 +43,6 @@ int main()
 	
 	cout << v << endl;
 
-	forEach(v, [](int x){cout << x*x << " ";});
+	forEach(v, [](auto x){cout << x*x << " ";});
 	cout << endl;
 }

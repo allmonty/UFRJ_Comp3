@@ -1,0 +1,15 @@
+Construir uma função for_each semelhante à da STL que:
+
+1) Funcione com begin/end
+
+2) aplique um functor a cada elemento da estrutura passada
+
+3) Seja a mesma para vector ou int[]
+
+ex:
+
+int a[] = { 1, 2, 3, 4 }
+for_each( &a[1], &a[3], []( int x ) { cout << x << endl; );
+deve imprimir 2 e 3.
+
+Note que ela deve funcionar para vector etc.
