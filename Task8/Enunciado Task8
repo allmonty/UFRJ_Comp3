@@ -1,0 +1,16 @@
+Usando a classe AutoPtr como base crie uma classe template AutoRef que irá realizar a contagem de referências. 
+
+Redefinir os operadores *, -> e [].
+
+Não tratar o caso onde se usa x = &a ou x = &a[1], onde x é um AutoRef.
+
+void teste() {
+  AutoRef<Data> a, b;
+
+  a = new Data();
+  b = new Data();
+
+
+  a = b;
+  // tem que desalocar "a" e o contador de "b" deve estar com 2.
+}
