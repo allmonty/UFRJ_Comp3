@@ -1,0 +1,11 @@
+Criar uma template de uma struct semelhante à std::tuple.
+
+Implementar os métodos make_tuple e get.
+
+Usar outros nomes (p.ex. Tuple, cria_tuple, at) para evitar conflito com std::tuple.
+
+Outra opção é declarar um namespace próprio:
+
+namespace Tupla {
+// Colocar as templates aqui.
+};
