@@ -6,3 +6,9 @@ Professor's page: http://www.cos.ufrj.br/~zimbrao/
 Page of the computer department: http://www.dcc.ufrj.br/
 
 I took the course in the second semester of 2016.
+
+Links:
+
+https://monoinfinito.wordpress.com/series/introduction-to-c-template-metaprogramming/
+
+https://en.wikipedia.org/wiki/Variadic_template
