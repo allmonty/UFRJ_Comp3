@@ -1,0 +1,10 @@
+Implementar uma template que torne possível o seguinte tipo de código:
+
+int tab[10] =  { 1, 2, 3, 2, 3, 4, 6, 0, 1, 8 };
+vector<int> v;
+tab | []( int x ) { cout << x*x << endl; };
+tab | [ &v ]( int x ) { v.push_back( x ); };
+v | []( int x ) { cout << x*x << endl; };
+Esse operador será equivalente a:
+
+for_each( tab, tab10,  []( int x ) { cout << x*x << endl; } );
