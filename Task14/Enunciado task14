@@ -1,0 +1,10 @@
+Criar um filtro que funcione para qualquer tipo que seja iterável, ou seja, tenha, begin() e end() que retornem um iterador e um fim de loop, de modo que seja possível determinar se acabaram os elementos. Lembrando que um iterador deve ter os operadores "*" e "++".
+
+Esse filtro deve retornar uma coleção iterável (através de begin-end etc) dos elementos para os quais o filtro foi verdadeiro.
+
+Basicamente, o código abaixo deve funcionar:
+
+vector<int> tab; // inserir alguns elementos.
+auto f = ( tab | x %2 == 0);
+for( auto s : f )
+  cout << s << endl; 

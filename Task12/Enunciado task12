@@ -1,0 +1,22 @@
+Acrescentar a variável "x" como sendo a variável default para cada "pipe". Essa variável será usada inicialmente para definir implicitamente functores.
+
+  int tab[10] =  { 1, 2, 3, 2, 3, 4, 6, 0, 1, 8 };
+  vector<int> v;
+  Var x;
+    
+  tab | [ &v ]( int x ) { v.push_back( x ); };
+    
+  auto op = x * x;
+  v | [ &op ]( int x ) { cout << op( x ) << endl; };
+  auto op2 = 2 * x;
+  v | [ &op2 ]( int x ) { cout << op2( x ) << endl; };
+
+Dessa forma, op é um functor que toma um argumento e retorna o produto dele por ele mesmo. Para implementá-lo, use uma Struct com um método template redefinindo o operador "()" para receber um parâmetro T.
+
+struct Multiplicador {
+  template <typename T> 
+  auto operator()( T a ) -> decltype( a * a ) {
+    return a*a;
+  }
+};
+

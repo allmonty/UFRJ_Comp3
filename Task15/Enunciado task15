@@ -1,0 +1,18 @@
+Criar um coleção "lazy", ou seja, um stream. Basta ser iterável em uma direção, do início ao fim.
+
+Usando o filtro da tarefa 14, ao inves de retornar uma coleção instanciada, retornar uma coleção "lazy": ela será instanciada a medida que o operador "++" for sendo chamado. Em momento algum ela deve retornar um vector<T> ou uma coleção instanciada.
+
+Assim, o seguinte código não instancia a coleção (nem testa ninguém nesse momento):
+
+Interval tab( 0, 1 << 32 );
+auto f = ( tab | x % 2 == 0 ) |  x % 3 == 0 ;
+no entanto, o código abaixo irá imprimir a coleção, instanciando um elemento de cada vez:
+
+int  i = 0;
+for( auto s : f ) {
+  if( i++ >100 ) break;
+  cout << s << endl;
+}
+A classe Interval é a que foi dada no laboratório.
+
+Note que o método "size()" irá instanciar a coleção, pois será necessário percorrê-la até o final. Uma vez que a coleção for instanciada, você deve armazená-la em um "cache".

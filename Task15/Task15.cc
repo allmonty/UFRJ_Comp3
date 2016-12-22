@@ -403,8 +403,6 @@ operator | (LazyCollection<F1> lazy, F2 f ) ->
 //===Declaring a variable X===//
 Var x;
 
-class teste{};
-
 int main() {
   Interval v(1, 1 << 31 );
 
