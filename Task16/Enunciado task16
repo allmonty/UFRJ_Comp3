@@ -1,0 +1,17 @@
+Crie as classes para que o código abaixo funcione, de forma "Lazy":
+
+template <typename T>
+Lazy<T> qs( vector<T> lista ) {
+  if( lista.size() <= 1 )
+    return lista;
+  else
+    return qs( tail( lista ) | x < head(lista) +
+           head(lista) +
+           qs( tail( lista ) | x > head(lista) );   
+}
+int main() {
+  vector<int> tab; // Inserir alguns elementos
+  auto f : qs( tab ); // Ainda não ordenou
+  for( auto s : f )
+    cout << s << endl; // Ordena e imprime nesse momento.
+}
